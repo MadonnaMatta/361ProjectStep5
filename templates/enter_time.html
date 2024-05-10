@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enter Time</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Enter Time for {{ session['location1'] }}</h1>
+    <form method="POST">
+      <input
+        type="text"
+        name="user_time"
+        placeholder="YYYY-MM-DD HH:MM:SS"
+        required
+      />
+      <br />
+      <button type="submit">Convert Time</button>
+    </form>
+    <p>Time for {{ session['location2'] }} will be shown on the next page.</p>
+    <a href="/select_format">Go Back</a>
+  </body>
+</html>

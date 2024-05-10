@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time Conversion Result</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Converted Time</h1>
+    <p>The time in {{ session['location2'] }} is: {{ final_time }}</p>
+    <a href="/">Convert another time</a>
+    <a href="/enter_time">Modify last conversion</a>
+  </body>
+</html>

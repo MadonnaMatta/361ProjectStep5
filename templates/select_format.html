@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Select Time Format</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Select Time Format</h1>
+    <form method="POST">
+      <button type="submit" name="time_format" value="24">24-hour</button>
+      <button type="submit" name="time_format" value="12">12-hour</button>
+    </form>
+    <a href="/">Go Back</a>
+  </body>
+</html>

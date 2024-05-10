@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Select Locations</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Select Time Zones</h1>
+    <form method="POST">
+      <label for="location1">First Location/Timezone:</label>
+      <select name="location1">
+        {% for tz in timezones %}
+        <option value="{{ tz }}">{{ tz }}</option>
+        {% endfor %}
+      </select>
+      <br />
+      <label for="location2">Second Location/Timezone:</label>
+      <select name="location2">
+        {% for tz in timezones %}
+        <option value="{{ tz }}">{{ tz }}</option>
+        {% endfor %}
+      </select>
+      <br />
+      <button type="submit">Next</button>
+    </form>
+    <p><i>Please select the first and second time zones.</i></p>
+  </body>
+</html>
